@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEV ICONS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="gevicons.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="toastr.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+       
+    </style>
+
+    <header>
+        <nav class="navbar">
+
+           <!--  <div class="logo">
+                <img width="100%" height="100%" src="img/logo-footer.png" alt="">
+                <p>Gobierno Del Estado De Veracruz</p>
+            </div> -->
+            <div class="menu">
+                <ul>
+                    <li><a href="#icon-section">Iconos</a></li>
+                    <li><a href="#documentation">Documentación</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="content-title">
+            <div class="circle item-1"></div>
+            <div class="circle item-2"></div>
+            <div class="circle item-3"></div>
+            <div class="title">
+                <h2>GEV <span>icons</span></h2>
+                
+            </div>
+        </div>
+
+    </header>
+    <main id="icon-section" >
+        <div class="container-search">
+            <div class="buscador">
+                <div class="form-search">
+                    <input type="search" id="search" placeholder="Buscar" class="search-input">
+                    <img src="img/lupa.png" width="30px" height="30px" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="title-section">
+            <h3 style="margin-top: 3px;">ICONOS</h3>
+        </div>
+        <div class="grid-columns" id="grid-columns">
+            
+        </div>
+        
+        
+    </main>
+    <section id="documentation">
+        <div class="documentation" >
+            <h3 style="margin-top: 0;">GEV ICONS</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, est. Recusandae, odit. Distinctio sapiente quas quidem dolorem autem dolore tenetur saepe veniam consequuntur, facere sit quae officiis sunt numquam rerum.
+                Mollitia eum totam commodi sed nisi sint culpa distinctio. Neque saepe natus, dolore blanditiis incidunt porro exercitationem officiis pariatur totam voluptatibus nulla labore impedit praesentium consequuntur voluptatum cum cupiditate est.
+                
+            </p>
+            <h3>COMO EMPEZAR CON GEV ICONS</h3>
+            <p>
+                1.- Copiar la dirección y pegar en el head de tu página.  
+            </p>
+            <code>
+                http://google.com
+            </code>
+            <p>
+                2.- Colocar la clase del icono en tu elemento HTML.  
+            </p>
+            <code>
+                
+                    &lt;div class="gev-grafica"> <br>
+
+                        .... <br>
+
+                    &lt;/div>
+             
+                
+            </code>
+
+            <p>
+                También puedes agregar el código UNICODE a tu HTML e indicar en tu CSS el tipo de fuente  
+            </p>
+            <p> CSS</p>
+            <code>
+                
+                    .custom-class{ <br>
+
+                        &nbsp  font-family: 'gevicons'; <br>
+                    }
+
+                
+                
+            </code>
+            <p>HTML</p>
+            <code>
+                &lt;div class="custom-class"&gt; &amp;#xf015; &lt;/div&gt;
+            </code>
+        </div>
+    </section>
+    <footer>
+        <span>Todos los derechos </span>
+        <!-- <button class="btn-contacto">Contacto</button> -->
+    </footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="data.json"></script>
+    <script>
+        var listIcons = JSON.parse(data);
+        var content = $('#grid-columns');
+
+        function getClass(texto){
+            toastr["success"]("Copiado!!");
+            navigator.clipboard.writeText(`<i class="${texto}"></i>`);
+        }
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-bottom-right",
+            "preventDuplicates": true,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+            }
+        
+        listIcons.forEach(element => {
+            let html = `
+                <div class="element-icon" onclick="getClass('${element.clase.replace(/\s/g,'')}')">
+                    <div class="icon-item">
+                        <i class="${element.clase}"></i>
+                        <p>${element.clase}</p>
+                        
+                    </div>
+                </div>
+            `;
+
+            content.append(html);
+        });
+
+
+        $("#search").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+                $("#grid-columns .element-icon").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+
+  
+
+       
+
+    </script>
+</body>
+</html>

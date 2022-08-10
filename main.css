@@ -1,0 +1,355 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+.grid-columns{
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    margin: 3rem 6rem;
+    gap: 1rem;
+    min-height: 400px;
+    padding-bottom: 5rem;
+}
+.element-icon{
+    max-width: 220px;
+    margin-bottom: 1rem;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+    max-height: 140px;
+}
+
+
+/* .element-icon:hover{
+    box-shadow: 1px 6px 16px 2px #a438ff29;
+    /* background: linear-gradient(-44deg, #a13bfe 13%, #3db1fd 72% );
+    transform: translate3d(-4px, 11px, 0) scale(1);
+    filter: blur(31px);
+    opacity: var(0.49);
+    
+}
+ */
+
+ .icon-item{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0px 2px 15px 1px rgb(148 148 148 / 20%);
+    z-index: 3;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   /*  border: 1px solid;
+    border-image-source: linear-gradient(to left, #B721FF , #3faffd);
+    border-image-slice: 1;
+    border-width: 2px; */
+    transition: opacity 500ms;
+    border: 2px solid transparent;
+ }
+
+.icon-item:hover{
+    cursor: pointer;
+}
+
+.element-icon:hover::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    opacity: 0.70;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-124deg, #b921ff7a  13%, #21b0fdb0 42% );
+    transform: translate3d(10px, 10px, 2px) scale(.9);
+    filter: blur(31px);
+   
+    border-radius: inherit;
+    
+}
+
+.element-icon:hover .icon-item{
+    background: 
+    linear-gradient(rgb(255, 255, 255) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, #3faefd8b, rgba(185, 33, 255, 0.518)) border-box;
+    border: 2px solid transparent;
+    
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+/* .element-icon::after {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+} */
+    
+
+.element-icon p{
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+i{
+    font-size: 80px;
+}
+header{
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    height: 600px;
+    width: 100%;
+   /*  position: relative; */
+
+}
+main{
+    width: 100%;
+    background-color: rgb(246, 246, 246);
+}
+.form-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-search input{
+    padding: 7px 12px;
+    outline: none;
+    border: none;
+    font-size: 22px;
+    min-width: 380px;
+
+}
+.container-search{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.buscador{
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 6px 7px 0px #4b46462b;
+    width: auto;
+    margin-top: -3rem;
+    padding: 12px;
+    z-index: 5;
+}
+
+nav{
+    width: 100%;
+    /* position: relative; */
+    padding: 8px 3px;
+}
+
+.btn-contacto{
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 25px;
+   /*  border: 1px solid #fff; */
+   border: none;
+
+}
+.btn-contacto:hover{
+   cursor: pointer;
+   box-shadow: -2px 2px 8px 0px rgb(224 224 224 / 43%);
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    background-color: #efefef17;
+    /* padding: 0 1rem; */
+    box-shadow: -3px 2px 3px 1px #57575730;
+}
+
+.content-title{
+    width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.circle{
+    backdrop-filter: blur(5px);
+    background-color: #ffffff1a;
+    -webkit-backdrop-filter: blur(16px);
+    
+}
+
+
+.circle.item-1{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    left: 30%;
+    z-index: 1;
+   /*  animation: float 6s infinite linear; */
+    /* animation: float 4s infinite linear; */
+    
+}
+.circle.item-2{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.8rem;
+    left: 28%;
+    z-index: 2;
+    animation: float 6s infinite linear;
+    /* animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
+    
+}
+.circle.item-3{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -1.5rem;
+    left: 58%;
+    z-index: 3;
+    animation: float 4s infinite linear;
+    /* animation: float 4s infinite linear; */
+    
+}
+
+.logo{
+    height: 100%;
+    display: flex;
+}
+.logo p{
+    color: #fff;
+    max-width: 150px ;
+    font-weight: 300;
+}
+.logo img{
+    width: 80px;
+}
+
+.content-title .title{
+    display: flex;
+    z-index: 2;
+}
+.content-title .title h2{
+    font-size: 120px;
+    margin: 0;
+}
+.content-title .title span{
+    color: #fff;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    height: 100%;
+}
+.menu ul li a{
+    font-size: 16px;
+    color: #fff;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.documentation{
+    background-color: #fff;
+    padding: 1rem 9rem;
+}
+
+.documentation h3, .title-section h3{
+    font-size: 40px;
+    margin-bottom: 10px;
+    /* margin-top: 8px; */
+}
+
+.title-section{
+    margin: 1rem 7.5rem;
+}
+
+.documentation p{
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.8rem;
+    letter-spacing: 1px;
+}
+
+
+code{
+    background-color: rgb(229, 229, 229);
+    padding: 1rem;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+}
+
+.toast .toast-success{
+    background-color: rgba(33, 33, 33, 0.918)!important;
+    background: 
+    linear-gradient(rgb(255, 255, 255) 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, #3faefd8b, rgba(185, 33, 255, 0.518)) border-box;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
+footer{
+    background-color: #000;
+    height: 120px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    padding: 0 6rem;
+}
+footer span{
+    color: #fff;
+}
+
+
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+		
+		transform: translatey(0px);
+	}
+}

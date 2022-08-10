@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'gevicons';
+  src:  url('fonts/gevicons.eot?xmxz9z');
+  src:  url('fonts/gevicons.eot?xmxz9z#iefix') format('embedded-opentype'),
+    url('fonts/gevicons.ttf?xmxz9z') format('truetype'),
+    url('fonts/gevicons.woff?xmxz9z') format('woff'),
+    url('fonts/gevicons.svg?xmxz9z#gevicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="gev-"], [class*=" gev-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'gevicons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.gev-add:before {
+  content: "\e900";
+}
+.gev-calculadora:before {
+  content: "\e901";
+}
+.gev-dinero:before {
+  content: "\e902";
+}
+.gev-dinero-mano:before {
+  content: "\e903";
+}
+.gev-documento-v1:before {
+  content: "\e904";
+}
+.gev-flecha:before {
+  content: "\e905";
+}
+.gev-grafica:before {
+  content: "\e906";
+}
+.gev-lapiz:before {
+  content: "\e907";
+}
+.gev-user:before {
+  content: "\e908";
+}
