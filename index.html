@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Pacifico&family=Roboto:wght@100;300;500;900&family=Shippori+Antique+B1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="gevicons.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="toastr.css">
@@ -23,33 +23,59 @@
     <style>
        
     </style>
-
-    <header>
-        <nav class="navbar">
-
-           <!--  <div class="logo">
-                <img width="100%" height="100%" src="img/logo-footer.png" alt="">
-                <p>Gobierno Del Estado De Veracruz</p>
-            </div> -->
-            <div class="menu">
-                <ul>
-                    <li><a href="#icon-section">Iconos</a></li>
-                    <li><a href="#documentation">Documentación</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
+    <div class="container-head">
+        <nav class="navbar" id="navbar">
+             <div class="menu">
+                 <ul>
+                     <li><a href="#icon-section">Iconos</a></li>
+                     <li><a href="#documentation">Documentación</a></li>
+                 </ul>
+             </div>
+             <div class="logo">
+               <!--  <img src="img/logo-footer.png" alt=""> --> <strong>gev</strong><span>icons</span>
+             </div>
         </nav>
-        <div class="content-title">
-            <div class="circle item-1"></div>
-            <div class="circle item-2"></div>
-            <div class="circle item-3"></div>
-            <div class="title">
-                <h2>GEV <span>icons</span></h2>
-                
+        <header>
+            <div class="icons-header">
+                <div style="margin-right: 1rem;">
+                    <i class="gev-autorizar-registro"></i>
+                    <i class="gev-clip"></i>
+                    <i class="gev-calculadora"></i>
+                    <i class="gev-banco-numeros-registro"></i>
+                    <i class="gev-alarma-check"></i>
+                </div>
+                <div>
+                    <i class="gev-agregar-registro"></i>
+                    <i class="gev-calculadora"></i>
+                    <i class="gev-cancelar-registro"></i>
+                    <i class="gev-carga-masiva"></i>
+                    <i class="gev-cargo-abono-t"></i>
+                    <i class="gev-clip"></i>
+                    <i class="gev-comprobacion-balanza"></i>
+                    <i class="gev-contador"></i>
+                </div>
+                <div style="margin-top: -2rem;margin-left:1rem;">
+                    <i class="gev-dinero-ingreso-cartera"></i>
+                    <i class="gev-direccion"></i>
+                    <i class="gev-documento-horizontal"></i>
+                    <i class="gev-edificio-bandera"></i>
+                    <i class="gev-cargo-abono-t"></i>
+                    <i class="gev-excepcion-sinderecho"></i>
+                    <i class="gev-escudo-usuario"></i>
+                    <i class="gev-malentin-reloj"></i>
+                </div>
             </div>
-        </div>
-
-    </header>
+            <div class="content-title">
+                <div class="circle item-1"></div>
+                <div class="circle item-2"></div>
+                <div class="circle item-3"></div>
+                <div class="title">
+                    <h2><span>gev</span><span>icons</span></h2>
+                </div>
+            </div>
+    
+        </header>
+    </div>
     <main id="icon-section" >
         <div class="container-search">
             <div class="buscador">
@@ -62,26 +88,25 @@
         <div class="title-section">
             <h3 style="margin-top: 3px;">ICONOS</h3>
         </div>
-        <div class="grid-columns" id="grid-columns">
+        <div class="grid-columns container" id="grid-columns">
             
         </div>
         
         
     </main>
-    <section id="documentation">
+    <section id="documentation" class="container">
         <div class="documentation" >
-            <h3 style="margin-top: 0;">GEV ICONS</h3>
+            <h3 style="margin-top: 0;">DOCUMENTACIÓN</h3>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, est. Recusandae, odit. Distinctio sapiente quas quidem dolorem autem dolore tenetur saepe veniam consequuntur, facere sit quae officiis sunt numquam rerum.
-                Mollitia eum totam commodi sed nisi sint culpa distinctio. Neque saepe natus, dolore blanditiis incidunt porro exercitationem officiis pariatur totam voluptatibus nulla labore impedit praesentium consequuntur voluptatum cum cupiditate est.
+                Repositorio de iconos Open Source
                 
             </p>
-            <h3>COMO EMPEZAR CON GEV ICONS</h3>
+            <h3>COMO EMPEZAR CON GEVICONS</h3>
             <p>
                 1.- Copiar la dirección y pegar en el head de tu página.  
             </p>
             <code>
-                http://google.com
+                &lt;link rel="stylesheet" type="text/css" href="https://torres9312.github.io/gevicons/gevicons.css">
             </code>
             <p>
                 2.- Colocar la clase del icono en tu elemento HTML.  
@@ -127,10 +152,22 @@
         var listIcons = JSON.parse(data);
         var content = $('#grid-columns');
 
+        window.addEventListener("scroll", (event) => {
+            
+            if(this.scrollY > 0){
+                if(!$("#navbar").hasClass('fixed')){
+                    $("#navbar").addClass('fixed');
+                }
+            }else if(this.scrollY === 0){
+                $("#navbar").removeClass('fixed');
+            }
+        });
+
         function getClass(texto){
             toastr["success"]("Copiado!!");
             navigator.clipboard.writeText(`<i class="${texto}"></i>`);
         }
+        
 
         toastr.options = {
             "closeButton": false,
@@ -140,7 +177,7 @@
             "positionClass": "toast-bottom-right",
             "preventDuplicates": true,
             "onclick": null,
-            "showDuration": "300",
+            "showDuration": "1500",
             "hideDuration": "1000",
             "timeOut": "5000",
             "extendedTimeOut": "1000",
