@@ -54,7 +54,7 @@
                     <i class="gev-comprobacion-balanza"></i>
                     <i class="gev-contador"></i>
                 </div>
-                <div style="margin-top: -2rem;margin-left:1rem;">
+                <div style="margin-top: -1rem;margin-left:1rem;">
                     <i class="gev-dinero-ingreso-cartera"></i>
                     <i class="gev-direccion"></i>
                     <i class="gev-documento-horizontal"></i>
@@ -81,15 +81,51 @@
             <div class="buscador">
                 <div class="form-search">
                     <input type="search" id="search" placeholder="Buscar" class="search-input">
-                    <img src="img/lupa.png" width="30px" height="30px" alt="">
+                    <img src="img/search.png" width="30px" height="30px" alt="">
                 </div>
             </div>
         </div>
         <div class="title-section">
             <h3 style="margin-top: 3px;">ICONOS</h3>
+            <div class="sections-icons">
+                <button class="btn-section" id="outline" onclick="changeSectionIcons(1)">Outline</button>
+                <button class="btn-section" id="fill" onclick="changeSectionIcons(2)">Fill</button>
+            </div>
         </div>
-        <div class="grid-columns container" id="grid-columns">
+        <div class="container" style="overflow: hidden;">
+            <div class="grid-columns" id="grid-icons-outline">
             
+            </div>
+            <div class="grid-columns" id="grid-icons-fill">
+                <div class="element-icon" onclick="getClass('algo')">
+                    <div class="icon-item">
+                        <i class="pruebaIcon"></i>
+                        <p>prueba icons</p>
+                        
+                    </div>
+                </div>
+                <div class="element-icon" onclick="getClass('algo')">
+                    <div class="icon-item">
+                        <i class="pruebaIcon"></i>
+                        <p>prueba icons</p>
+                        
+                    </div>
+                </div>
+                <div class="element-icon" onclick="getClass('algo')">
+                    <div class="icon-item">
+                        <i class="pruebaIcon"></i>
+                        <p>prueba icons</p>
+                        
+                    </div>
+                </div>
+                <div class="element-icon" onclick="getClass('algo')">
+                    <div class="icon-item">
+                        <i class="pruebaIcon"></i>
+                        <p>prueba icons</p>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
         
         
@@ -150,7 +186,27 @@
     <script src="data.json"></script>
     <script>
         var listIcons = JSON.parse(data);
-        var content = $('#grid-columns');
+        var contentOutline = $('#grid-icons-outline');
+        var contentFill = $('#grid-icons-fill');
+        var sectionIcons = 1;
+
+        $('#outline').prop('disabled', true);
+        contentOutline.addClass('visible');
+
+        function changeSectionIcons(item){
+            $('.btn-section').prop('disabled', false);
+
+            if(item === 1){
+                $('#outline').prop('disabled', true);
+                contentOutline.addClass('visible');
+                contentFill.removeClass('visible');
+            }else if(item === 2){
+                $('#fill').prop('disabled', true);
+                contentFill.addClass('visible');
+                contentOutline.removeClass('visible');
+              
+            }
+        }
 
         window.addEventListener("scroll", (event) => {
             
@@ -198,7 +254,7 @@
                 </div>
             `;
 
-            content.append(html);
+            contentOutline.append(html);
         });
 
 
