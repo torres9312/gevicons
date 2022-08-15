@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="title-section">
-            <h3 style="margin-top: 3px;">ICONOS</h3>
+            <h3 style="margin-top: 3px;">ICONOS  </h3>
             <div class="sections-icons">
                 <button class="btn-section" id="outline" onclick="changeSectionIcons(1)">Outline</button>
                 <button class="btn-section" id="fill" onclick="changeSectionIcons(2)">Fill</button>
@@ -97,34 +97,7 @@
             
             </div>
             <div class="grid-columns" id="grid-icons-fill">
-                <div class="element-icon" onclick="getClass('algo')">
-                    <div class="icon-item">
-                        <i class="pruebaIcon"></i>
-                        <p>prueba icons</p>
-                        
-                    </div>
-                </div>
-                <div class="element-icon" onclick="getClass('algo')">
-                    <div class="icon-item">
-                        <i class="pruebaIcon"></i>
-                        <p>prueba icons</p>
-                        
-                    </div>
-                </div>
-                <div class="element-icon" onclick="getClass('algo')">
-                    <div class="icon-item">
-                        <i class="pruebaIcon"></i>
-                        <p>prueba icons</p>
-                        
-                    </div>
-                </div>
-                <div class="element-icon" onclick="getClass('algo')">
-                    <div class="icon-item">
-                        <i class="pruebaIcon"></i>
-                        <p>prueba icons</p>
-                        
-                    </div>
-                </div>
+                
             </div>
         </div>
         
@@ -154,7 +127,7 @@
                         .... <br>
 
                     &lt;/div>
-             
+                    
                 
             </code>
 
@@ -219,9 +192,14 @@
             }
         });
 
-        function getClass(texto){
+        function getClass(texto , type){
             toastr["success"]("Copiado!!");
-            navigator.clipboard.writeText(`<i class="${texto}"></i>`);
+
+            if(type === 'unicode'){
+                navigator.clipboard.writeText('&#x'+ texto);
+            }else if(type === 'html'){
+                navigator.clipboard.writeText(`<i class="${texto}"></i>`);
+            }
         }
         
 
@@ -245,8 +223,19 @@
         
         listIcons.forEach(element => {
             let html = `
-                <div class="element-icon" onclick="getClass('${element.clase.replace(/\s/g,'')}')">
+                <div class="element-icon" >
+                    
                     <div class="icon-item">
+                        <div class="overlay">
+                            <button class="btn-download tooltip"  onclick="getClass('${element.clase.replace(/\s/g,'')}','html')"> 
+                                <span class="tooltiptext">HTML Tag</span> 
+                                &lt;/> 
+                            </button>
+                            <button class="btn-download tooltip" onclick="getClass('${element.unicode.replace(/\s/g,'')}','unicode')">
+                                 <span class="tooltiptext">Unicode</span> 
+                                 &amp;#x 
+                            </button>
+                        </div>
                         <i class="${element.clase}"></i>
                         <p>${element.clase}</p>
                         

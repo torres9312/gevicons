@@ -8,7 +8,7 @@ html,body{
 }
 .grid-columns{
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 210px) );
+    grid-template-columns: repeat( auto-fit, minmax(150px, 187px) );
     /* margin: 3rem 6rem; */
     gap: 1rem;
     padding-bottom: 0;
@@ -54,7 +54,7 @@ html,body{
  .icon-item{
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #fff;
     box-shadow: 0px 2px 15px 1px rgb(148 148 148 / 20%);
     z-index: 3;
@@ -69,38 +69,80 @@ html,body{
     border-width: 2px; */
     transition: opacity 500ms;
     border: 2px solid transparent;
+    position: relative;
  }
 
-.icon-item:hover{
-    cursor: pointer;
-}
-
-.element-icon:hover::after {
-    content: "";
-    z-index: -1;
+ .element-icon .overlay{
+    z-index: 5;
     position: absolute;
-    opacity: 0.70;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    /*  #49453C
-#756c2b 0%, #b1a152 */
-    background: linear-gradient(-124deg, #b1a15289  3%, #b1a152a1 2% );
-    transform: translate3d(10px, 10px, 2px) scale(.9);
-    filter: blur(31px);
-   
+    /* opacity: 0.70; */
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(237, 237, 237, 0.2);
+    background: #6c6c6c2e;
+    backdrop-filter: blur(2px);
+    /* transform: translate3d(10px, 10px, 2px) scale(.9);
+    filter: blur(31px); */
+    display: none;
     border-radius: inherit;
+    
+ }
+
+ .btn-download{
+    border: 1px solid #ffffff;
+    background: #343434;
+    padding: 6px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px 0px #a7a7a7b0;
+    color: #fff;
+    width: 40px;
+    margin-bottom: 0.6rem;
+ }
+
+ .btn-download:hover{
+    cursor: pointer;
+ }
+
+ .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.566);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 6px;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 2px;
+    right: 105%;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+.element-icon:hover .overlay {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
     
 }
 
 .element-icon:hover .icon-item{
    /*  #49453C
 #756c2b 0%, #b1a152 */
-    background: 
-    linear-gradient(rgb(255, 255, 255) 0 0) padding-box, /*this is your grey background*/
-    linear-gradient(to right, #8f844f4a, #8f844f4a) border-box;
-    border: 2px solid transparent;
+   
     
 }
 
@@ -359,6 +401,10 @@ nav{
     font-size: 50px;
     margin-bottom: .8rem;
     
+}
+
+.icons{
+    font-family: 'gevicons';
 }
 
 .icons-header{
