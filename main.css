@@ -14,7 +14,7 @@ html,body{
     padding-bottom: 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s linear 0.10s, opacity 0.800s linear;
+    transition: visibility .500s linear 0.5s, opacity 0.300s linear;
     min-height: 0px;
     height: 0px;
     /* position: absolute; */
@@ -67,7 +67,7 @@ html,body{
     border-image-source: linear-gradient(to left, #B721FF , #3faffd);
     border-image-slice: 1;
     border-width: 2px; */
-    transition: opacity 500ms;
+    transition: opacity 300ms;
     border: 2px solid transparent;
     position: relative;
  }
@@ -91,7 +91,7 @@ html,body{
  }
 
  .btn-download{
-    border: 1px solid #ffffff;
+    border: 1px solid #343434;
     background: #343434;
     padding: 6px;
     border-radius: 5px;

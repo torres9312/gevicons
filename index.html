@@ -173,11 +173,12 @@
                 $('#outline').prop('disabled', true);
                 contentOutline.addClass('visible');
                 contentFill.removeClass('visible');
+                sectionIcons = 1;
             }else if(item === 2){
                 $('#fill').prop('disabled', true);
                 contentFill.addClass('visible');
                 contentOutline.removeClass('visible');
-              
+                sectionIcons = 2;
             }
         }
 
@@ -211,7 +212,7 @@
             "positionClass": "toast-bottom-right",
             "preventDuplicates": true,
             "onclick": null,
-            "showDuration": "200",
+            "showDuration": "600",
             "hideDuration": "300",
             "timeOut": "500",
             "extendedTimeOut": "1000",
@@ -222,6 +223,8 @@
             }
         
         listIcons.forEach(element => {
+
+
             let html = `
                 <div class="element-icon" >
                     
@@ -243,19 +246,31 @@
                 </div>
             `;
 
-            contentOutline.append(html);
+            if( element.clase.includes("outline")){
+                contentOutline.append(html);
+            }else{
+                contentFill.append(html);
+            }
+            
         });
 
 
+        $('#search').on('search', function () {
+            filterValue("");
+        });
+
         $("#search").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
+           filterValue($(this).val().toLowerCase());
+        });
+
+        function filterValue(valueInput){
+            var value = valueInput;
             var type = (sectionIcons === 1) ? 'grid-icons-outline' : 'grid-icons-fill';
 
             $('#'+type+' .element-icon').filter(function() {
                 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
             }); 
-
-        });
+        }
 
   
 

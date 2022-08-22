@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'gevicons';
-  src:  url('fonts/gevicons.eot?7h0jdf');
-  src:  url('fonts/gevicons.eot?7h0jdf#iefix') format('embedded-opentype'),
-    url('fonts/gevicons.ttf?7h0jdf') format('truetype'),
-    url('fonts/gevicons.woff?7h0jdf') format('woff'),
-    url('fonts/gevicons.svg?7h0jdf#gevicons') format('svg');
+  src:  url('fonts/gevicons.eot?wxm30h');
+  src:  url('fonts/gevicons.eot?wxm30h#iefix') format('embedded-opentype'),
+    url('fonts/gevicons.ttf?wxm30h') format('truetype'),
+    url('fonts/gevicons.woff?wxm30h') format('woff'),
+    url('fonts/gevicons.svg?wxm30h#gevicons') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,622 +25,57 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.gev-acuerdo-manos:before {
+.gev-contratos-regreso-flecha:before {
   content: "\e900";
 }
-.gev-agregar-clasif-admin:before {
+.gev-dar-dinero-mano-pagar:before {
   content: "\e901";
-  
-}
-.gev-agregar-registro:before {
-  content: "\e902";
-}
-.gev-alarma-check:before {
-  content: "\e903";
-}
-.gev-alineacion-a-flecha:before {
-  content: "\e904";
-  
-}
-.gev-aos-periodo:before {
-  content: "\e905";
-  
-}
-.gev-arbol-relacion:before {
-  content: "\e906";
-}
-.gev-archivos-empleado:before {
-  content: "\e907";
-}
-.gev-autorizar-lotes:before {
-  content: "\e908";
-}
-.gev-autorizar-registro:before {
-  content: "\e909";
-}
-.gev-balanza:before {
-  content: "\e90a";
-}
-.gev-balanza-momento:before {
-  content: "\e90b";
-}
-.gev-banco-numeros-registro:before {
-  content: "\e90c";
-}
-.gev-bancos:before {
-  content: "\e90d";
-}
-.gev-calculadora:before {
-  content: "\e90e";
-}
-.gev-calendario-cerrar:before {
-  content: "\e90f";
-}
-.gev-calendario-flecha:before {
-  content: "\e910";
-}
-.gev-camara:before {
-  content: "\e911";
-}
-.gev-cancelar-cuenta:before {
-  content: "\e912";
-}
-.gev-cancelar-registro:before {
-  content: "\e913";
-}
-/* .gev-cancelar-registro:before {
-  content: "\e914";
-} */
-/* .gev-cancelar-registro:before {
-  content: "\e915";
-} */
-.gev-cancelar-registro {
-  display: flex;
-}
-.gev-cancelar-registro:after {
-  content: "\e916";
-  position: absolute;
-}
-.gev-capas:before {
-  content: "\e917";
-}
-.gev-capas-2:before {
-  content: "\e918";
-}
-.gev-carga-masiva:before {
-  content: "\e919";
-}
-.gev-cargo-abono-t:before {
-  content: "\e91a";
-}
-.gev-casa-circulo:before {
-  content: "\e91b";
-}
-.gev-casas-grupo:before {
-  content: "\e91c";
-}
-.gev-casas-varias:before {
-  content: "\e91d";
-}
-.gev-cerrar-cruz:before {
-  content: "\e91e";
-}
-.gev-cerrar-sesion:before {
-  content: "\e91f";
-}
-.gev-check-barra:before {
-  content: "\e920";
-}
-.gev-checkbox:before {
-  content: "\e921";
-}
-.gev-cheque_cancelar_dinero:before {
-  content: "\e922";
-}
-.gev-circulo-cruz:before {
-  content: "\e923";
-}
-.gev-circulo-flecha:before {
-  content: "\e924";
-}
-.gev-cirulo-flecha:before {
-  content: "\e925";
-}
-.gev-clasificaciones:before {
-  content: "\e926";
-}
-.gev-clc:before {
-  content: "\e927";
-}
-.gev-c-letra-cuadro:before {
-  content: "\e928";
-}
-.gev-clip:before {
-  content: "\e929";
-}
-.gev-clonar-registro:before {
-  content: "\e92a";
-  
-}
-.gev-comprobacion-balanza:before {
-  content: "\e92b";
-}
-.gev-concepto-balanza:before {
-  content: "\e92c";
-}
-.gev-configuracion-usuario:before {
-  content: "\e92d";
-}
-.gev-contador:before {
-  content: "\e92e";
-}
-.gev-contratos-regreso-flecha:before {
-  content: "\e92f";
-}
-.gev-correcto-check:before {
-  content: "\e930";
-}
-.gev-criterios:before {
-  content: "\e931";
-}
-.gev-cuenta-bancaria:before {
-  content: "\e932";
-}
-.gev-derecho-escudo:before {
-  content: "\e933";
-}
-.gev-derecho-items:before {
-  content: "\e934";
-  
-}
-.gev-derecho-lupa-check:before {
-  content: "\e935";
-  
-}
-.gev-derecho-lupa-escudo:before {
-  content: "\e936";
-}
-.gev-descarga-multiple:before {
-  content: "\e937";
-}
-.gev-descargar:before {
-  content: "\e938";
-}
-.gev-detalle-lista:before {
-  content: "\e939";
-  
-}
-.gev-dinero-a-tiempo:before {
-  content: "\e93a";
-}
-.gev-dinero-aumentar-mas:before {
-  content: "\e93b";
-}
-.gev-dinero-egreso-cartera:before {
-  content: "\e93c";
-}
-.gev-dinero-flecha:before {
-  content: "\e93d";
-}
-.gev-dinero-flecha-abajo:before {
-  content: "\e93e";
-}
-.gev-dinero-flechas:before {
-  content: "\e93f";
-}
-.gev-dinero-flechas-persona:before {
-  content: "\e940";
-}
-.gev-dinero-ingreso-cartera:before {
-  content: "\e941";
-}
-.gev-dinero-listado:before {
-  content: "\e942";
-}
-.gev-dinero-mano-dar-saldos:before {
-  content: "\e943";
-}
-.gev-dinero-mas-conceptos:before {
-  content: "\e944";
-}
-.gev-dinero-mas-operaciones:before {
-  content: "\e945";
-}
-.gev-direccion:before {
-  content: "\e946";
-}
-.gev-doc-presupuesto-check:before {
-  content: "\e947";
-}
-.gev-documento:before {
-  content: "\e948";
 }
 .gev-documento-a-calcular:before {
-  content: "\e949";
+  content: "\e902";
 }
 .gev-documento-a-mas:before {
-  content: "\e94a";
-}
-.gev-documento-dinero-papel:before {
-  content: "\e94b";
-}
-.gev-documento-horizontal:before {
-  content: "\e94c";
-}
-.gev-documento-ley:before {
-  content: "\e94d";
-}
-.gev-documento-maletin-reloj:before {
-  content: "\e94e";
-}
-.gev-documento-p:before {
-  content: "\e94f";
+  content: "\e903";
 }
 .gev-documentos-versiones:before {
-  content: "\e950";
+  content: "\e904";
 }
-.gev-edificio:before {
-  content: "\e951";
-}
-.gev-edificio-bandera:before {
-  content: "\e952";
-}
-.gev-editar:before {
-  content: "\e953";
-  
-}
-.gev-editar-registro:before {
-  content: "\e954";
-}
-.gev-eliminar:before {
-  content: "\e955";
-}
-.gev-enviar:before {
-  content: "\e956";
-}
-.gev-escudo-usuario:before {
-  content: "\e957";
-}
-.gev-excepcion-sinderecho:before {
-  content: "\e958";
-}
-.gev-exportar-excel:before {
-  content: "\e959";
-}
-.gev-familia:before {
-  content: "\e95a";
-}
-.gev-filtro:before {
-  content: "\e95b";
-}
-.gev-filtro_p:before {
-  content: "\e95c";
-}
-.gev-filtro-busqueda:before {
-  content: "\e95d";
-}
-.gev-finalizar-registro:before {
-  content: "\e95e";
-}
-.gev-flecha-arriba-izquierda:before {
-  content: "\e95f";
-}
-.gev-flecha-enviar-limite:before {
-  content: "\e960";
-}
-.gev-formulario:before {
-  content: "\e961";
-}
-.gev-grupo-flecha:before {
-  content: "\e962";
-}
-.gev-guardar:before {
-  content: "\e963";
-}
-.gev-guardar_registro {
-  display: flex;
-}
-.gev-guardar_registro:after {
-  content: "\e966";
-}
-.gev-guardar_registro:before {
-  content: "\e967";
-  position: absolute;
-}
-.gev-home:before {
-  content: "\e968";
-}
-.gev-i:before {
-  content: "\e969";
-}
-.gev-imprimir:before {
-  content: "\e96a";
-}
-.gev-imprimir-lotes:before {
-  content: "\e96b";
-}
-.gev-info-principal-personal:before {
-  content: "\e96c";
-}
-.gev-integrar:before {
-  content: "\e96d";
+.gev-filtro-lista:before {
+  content: "\e905";
 }
 .gev-ip-estadistica-flecha:before {
-  content: "\e96e";
+  content: "\e906";
 }
 .gev-lapiz-documento-proyecto:before {
-  content: "\e96f";
+  content: "\e907";
 }
-.gev-lentes-aparatos:before {
-  content: "\e970";
+.gev-mano-dinero:before {
+  content: "\e908";
 }
-.gev-leyes:before {
-  content: "\e971";
+.gev-contratos-regreso-flecha-outline:before {
+  content: "\e909";
 }
-.gev-libreta-guia:before {
-  content: "\e972";
+.gev-dar-dinero-mano-pagar-outline:before {
+  content: "\e90a";
 }
-.gev-libro-abierto:before {
-  content: "\e973";
+.gev-documento-a-calcular-outline:before {
+  content: "\e90b";
 }
-.gev-libro-abierto-2:before {
-  content: "\e974";
+.gev-documento-a-mas-outline:before {
+  content: "\e90c";
 }
-.gev-limite-flecha:before {
-  content: "\e975";
+.gev-documentos-versiones-outline:before {
+  content: "\e90d";
 }
-.gev-limpiar-busqueda:before {
-  content: "\e976";
+.gev-filtro-lista-contornos-outline:before {
+  content: "\e90e";
 }
-.gev-lista-check-seguro:before {
-  content: "\e977";
+.gev-ip-estadistica-flecha-outline:before {
+  content: "\e90f";
 }
-.gev-lista-circulos:before {
-  content: "\e978";
+.gev-lapiz-documento-proyecto-outline:before {
+  content: "\e910";
 }
-.gev-lista-documento:before {
-  content: "\e979";
-}
-.gev-lista-folder:before {
-  content: "\e97a";
-}
-.gev-lista-mas:before {
-  content: "\e97b";
-}
-.gev-lista-menu:before {
-  content: "\e97c";
-}
-.gev-lista-numerada:before {
-  content: "\e97d";
-}
-.gev-lista-numeros:before {
-  content: "\e97e";
-}
-.gev-m:before {
-  content: "\e97f";
-}
-.gev-malentin-reloj:before {
-  content: "\e980";
-}
-.gev-maleta:before {
-  content: "\e981";
-}
-.gev-maletin-grupo:before {
-  content: "\e982";
-}
-.gev-maletin-usuario-flechas:before {
-  content: "\e983";
-}
-.gev-mano-pedir-dinero:before {
-  content: "\e984";
-}
-.gev-mano-selecciona:before {
-  content: "\e985";
-}
-.gev-mas:before {
-  content: "\e986";
-}
-.gev-mas-menos-llaves:before {
-  content: "\e987";
-}
-.gev-mas-opciones:before {
-  content: "\e988";
-}
-.gev-menos:before {
-  content: "\e989";
-}
-.gev-menu-items:before {
-  content: "\e98a";
-  
-}
-.gev-menu-items-lupa:before {
-  content: "\e98b";
-  
-}
-.gev-menu-lista:before {
-  content: "\e98c";
-}
-.gev-menu-lista-lupa:before {
-  content: "\e98d";
-}
-.gev-mexico:before {
-  content: "\e98e";
-}
-.gev-m-maletin:before {
-  content: "\e98f";
-}
-.gev-ojo:before {
-  content: "\e990";
-}
-.gev-orden-pagar:before {
-  content: "\e991";
-}
-.gev-orden-pago-lotes:before {
-  content: "\e992";
-}
-.gev-parte-estadistica:before {
-  content: "\e993";
-}
-.gev-perfil-trabajador:before {
-  content: "\e994";
-}
-.gev-pin:before {
-  content: "\e995";
-}
-.gev-play:before {
-  content: "\e996";
-}
-.gev-poliza-registros:before {
-  content: "\e997";
-}
-.gev-porcentaje-llaves:before {
-  content: "\e998";
-}
-.gev-premio:before {
-  content: "\e999";
-}
-.gev-prestaciones-icon:before {
-  content: "\e99a";
-}
-.gev-presupuesto-auxiliar:before {
-  content: "\e99b";
-}
-.gev-presupuesto-usuario:before {
-  content: "\e99c";
-}
-.gev-puestos-grupos:before {
-  content: "\e99d";
-}
-.gev-puntos:before {
-  content: "\e99e";
-}
-.gev-rango-flechas:before {
-  content: "\e99f";
-}
-.gev-r-catalogo-conceptos:before {
-  content: "\e9a0";
-}
-.gev-recargar:before {
-  content: "\e9a1";
-}
-.gev-regresar-flecha:before {
-  content: "\e9a2";
-}
-.gev-relacion:before {
-  content: "\e9a3";
-}
-.gev-relaciones-lista:before {
-  content: "\e9a4";
-}
-.gev-reloj-check:before {
-  content: "\e9a5";
-}
-.gev-reporte-mas:before {
-  content: "\e9a6";
-}
-.gev-reporte-varios:before {
-  content: "\e9a7";
-}
-.gev-saldos-carga:before {
-  content: "\e9a8";
-}
-.gev-sar-escudo:before {
-  content: "\e9a9";
-}
-.gev-shortcut:before {
-  content: "\e9aa";
-}
-.gev-stop-limite:before {
-  content: "\e9ab";
-}
-.gev-subir-doc:before {
-  content: "\e9ac";
-}
-.gev-tabla-actualizar:before {
-  content: "\e9ad";
-}
-.gev-tabla-columnas:before {
-  content: "\e9ae";
-}
-.gev-tablero-busqueda:before {
-  content: "\e9af";
-}
-.gev-tablero-reloj:before {
-  content: "\e9b0";
-}
-.gev-tarjeta:before {
-  content: "\e9b1";
-}
-.gev-tesoreria-banco:before {
-  content: "\e9b2";
-}
-.gev-texto-busqueda:before {
-  content: "\e9b3";
-}
-.gev-ticket-dinero:before {
-  content: "\e9b4";
-}
-.gev-ticket-flechas:before {
-  content: "\e9b5";
-}
-.gev-transferir-registro:before {
-  content: "\e9b6";
-}
-.gev-trazabilidad:before {
-  content: "\e9b7";
-}
-.gev-traza-integrar:before {
-  content: "\e9b8";
-}
-.gev-usuario-archivo:before {
-  content: "\e9b9";
-}
-.gev-usuario-cambiar:before {
-  content: "\e9ba";
-}
-.gev-usuario-escuela:before {
-  content: "\e9bb";
-}
-.gev-usuario-flecha-izquierda:before {
-  content: "\e9bc";
-}
-.gev-usuario-folder-archivo:before {
-  content: "\e9bd";
-}
-.gev-usuario-llave:before {
-  content: "\e9be";
-}
-.gev-usuario-mas:before {
-  content: "\e9bf";
-}
-.gev-usuario-perfil:before {
-  content: "\e9c0";
-  
-}
-.gev-usuario-persona-b:before {
-  content: "\e9c1";
-}
-.gev-usuario-regresar:before {
-  content: "\e9c2";
-}
-.gev-usuario-reloj-tiempo:before {
-  content: "\e9c3";
-}
-.gev-usuarios:before {
-  content: "\e9c4";
-}
-.gev-usuarios-grupo:before {
-  content: "\e9c5";
-}
-.gev-usuario-tablero:before {
-  content: "\e9c6";
-}
-.gev-varios-documentos:before {
-  content: "\e9c7";
-}
-.gev-web:before {
-  content: "\e9c8";
-}
-.gev-xml:before {
-  content: "\e9c9";
+.gev-mano-dinero-outline:before {
+  content: "\e911";
 }
