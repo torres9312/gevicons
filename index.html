@@ -86,7 +86,7 @@
             </div>
         </div>
         <div class="title-section">
-            <h3 style="margin-top: 3px;">ICONOS  </h3>
+            <h3 style="margin-top: 3px;">ICONOS   </h3>
             <div class="sections-icons">
                 <button class="btn-section" id="outline" onclick="changeSectionIcons(1)">Outline</button>
                 <button class="btn-section" id="fill" onclick="changeSectionIcons(2)">Fill</button>
@@ -112,21 +112,18 @@
             </p>
             <h3>COMO EMPEZAR CON GEVICONS</h3>
             <p>
-                1.- Copiar la dirección y pegar en el head de tu página.  
+                1.- Copiar la dirección y pegar dentro del "&lt;head>" de tu página.  
             </p>
-            <code>
-                &lt;link rel="stylesheet" type="text/css" href="https://torres9312.github.io/gevicons/gevicons.css">
+            <code class="copy-text">
+                &lt;link rel="stylesheet" type="text/css" href="http://gevicons.veracruz.gob.mx/gevicons.css">
+                <button class="btn-copy" onclick="unsecuredCopyToClipboard('link')">Copiar</button>
             </code>
             <p>
-                2.- Colocar la clase del icono en tu elemento HTML.  
+                2.- Selecciona y copia el código HTML de tu el icono (Ej.).  
             </p>
             <code>
                 
-                    &lt;div class="gev-grafica"> <br>
-
-                        .... <br>
-
-                    &lt;/div>
+                    &lt;i class="gev-grafica"> &lt;/i>
                     
                 
             </code>
@@ -176,8 +173,8 @@
                 sectionIcons = 1;
             }else if(item === 2){
                 $('#fill').prop('disabled', true);
-                contentFill.addClass('visible');
                 contentOutline.removeClass('visible');
+                contentFill.addClass('visible');
                 sectionIcons = 2;
             }
         }
@@ -193,14 +190,48 @@
             }
         });
 
-        function getClass(texto , type){
-            toastr["success"]("Copiado!!");
+        async  function getClass(texto , type){
+           
 
             if(type === 'unicode'){
-                navigator.clipboard.writeText('&#x'+ texto);
+                if (navigator.clipboard) { // If normal copy method available, use it
+                    navigator.clipboard.writeText('&#x'+ texto);
+                    toastr["success"]("Copiado!!");
+                } else { 
+                    unsecuredCopyToClipboard('&#x'+ texto);
+                }
             }else if(type === 'html'){
-                navigator.clipboard.writeText(`<i class="${texto}"></i>`);
+                if (navigator.clipboard) { // If normal copy method available, use it
+                    navigator.clipboard.writeText(`<i class="${texto}"></i>`);
+                    toastr["success"]("Copiado!!");
+                } else { 
+                    unsecuredCopyToClipboard(`<i class="${texto}"></i>`);
+                }
+                   
             }
+        }
+
+        function unsecuredCopyToClipboard(text) {
+
+            if(text === 'link'){
+                text = '<link rel="stylesheet" type="text/css" href="http://gevicons.veracruz.gob.mx/gevicons.css">';
+            }
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            textArea.style.position = "fixed";
+            textArea.style.left = "-999999px";
+            textArea.style.top = "-999999px";
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+            } catch (err) {
+                console.error('No se puede copiar', err);
+            }
+            document.body.removeChild(textArea);
+
+            toastr["success"]("Copiado!!");
         }
         
 
@@ -212,9 +243,9 @@
             "positionClass": "toast-bottom-right",
             "preventDuplicates": true,
             "onclick": null,
-            "showDuration": "600",
-            "hideDuration": "300",
-            "timeOut": "500",
+            "showDuration": "1000",
+            "hideDuration": "1000",
+            "timeOut": "1000",
             "extendedTimeOut": "1000",
             "showEasing": "swing",
             "hideEasing": "linear",

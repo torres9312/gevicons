@@ -14,7 +14,8 @@ html,body{
     padding-bottom: 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility .500s linear 0.5s, opacity 0.300s linear;
+    transition:  opacity 0.400s linear;
+    transition-delay: .3s;
     min-height: 0px;
     height: 0px;
     /* position: absolute; */
@@ -278,6 +279,7 @@ nav{
 
 .navbar.fixed{
     position: fixed;
+    border-bottom: 3px solid #baad7d;
     z-index: 9;
     height: 40px;
     backdrop-filter: blur(8px);
@@ -295,8 +297,6 @@ nav{
     max-height: 100%;
     display: flex;
     justify-content: center;
-    /* margin-top: 9rem; */
-    /* position: relative; */
     padding-top: 12rem;
 }
 
@@ -538,6 +538,35 @@ footer{
 }
 footer span{
     color: #fff;
+}
+
+.copy-text{
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.copy-text .btn-copy{
+    background-color: #000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 15px;
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    opacity: 0;
+    visibility: 0;
+    /* transform: translateY(-2.5rem); */
+    transition: opacity 400ms , visibility 400ms;
+    transition-delay: .1s;
+    /* transition-duration: 800ms; */
+    cursor: pointer;
+}
+
+.copy-text:hover .btn-copy{
+    opacity: 1;
+    visibility: visible;
 }
 
 
