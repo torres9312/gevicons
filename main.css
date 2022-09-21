@@ -569,6 +569,13 @@ footer span{
     visibility: visible;
 }
 
+#button-download{
+    /* text-decoration: none; */
+    font-weight: 500;
+    color: #000;
+    font-size: 18px;
+}
+
 
 @keyframes float {
 	0% {
@@ -622,6 +629,17 @@ footer span{
 
 
 @media screen and (max-width: 576px) {
+    #documentation p{
+        font-size: 18px;
+    }
+    #documentation code{
+        font-size: 14px;
+        max-width: 90%;
+    }
+
+    .grid-columns.visible{
+        justify-content: center;
+    }
     header{
         height: 550px;
     }
